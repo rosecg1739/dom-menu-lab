@@ -19,16 +19,6 @@ const menuLinks = [
 ];
 
 
-// Menu data structure task 3.0
-const menuLinks = [
-    {text: 'about', href: '/about'},
-    {text: 'catalog', href: '/catalog'},
-    {text: 'orders', href: '/orders'},
-    {text: 'account', href: '/account'},
-  ];
-  
-
-
 // task 1.0
 
 const mainEl = document.querySelector('main');
@@ -61,7 +51,7 @@ topmenuEl.classList.add('flex-around');
 
 menuLinks.forEach(function(link) {
 const linkEl = document.createElement('a');
-linkEl,setAttribute('href', link.href);
+linkEl.setAttribute('href', link.href);
 linkEl.textContent = link.text;
 topmenuEl.appendChild(linkEl);
 });
@@ -157,7 +147,7 @@ function buildSubMenu(subLinks) {
 subMenuEl.addEventListener('click', function(evt) {
   evt.preventDefault();
   const link = evt.target;
-  if (link.tagName !== 'A') return;
+  if (link.tagName !== 'a') return;
   console.log(link.textContent);
 
   // Task 6.1
